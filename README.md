@@ -64,3 +64,18 @@ These links are preserved even if they failed or were unreliable, because this r
 Keep original physical media, a verified local image, and a second copy on separate storage. Use your own legitimate product key/license where required.
 
 Created: **September 18, 2026**.
+
+
+## Maintenance rules for future updates
+
+When adding links to this archive:
+
+- Preserve existing links, including failed, stale, or unreliable ones, unless there is a clear reason to remove them.
+- Add a plain-English description of **what the software/file is** and **what the link is for**.
+- Record the direct download URL when available, plus a parent/source page as a fallback.
+- Record filename, edition/version, architecture, file size, and verification hashes when known.
+- Mark links with useful status notes such as working, alternate, unreliable, or stale.
+- Update `index.html`, `README.md`, and `links.json` together when practical.
+- The HTML page includes a client-side search box; make new archive entries descriptive so they are easy to find by product name, version, filename, media type, or source.
+
+This repository is the canonical **Software Archive** link-backup location. A future ChatGPT conversation asked to “upload/back up these links to my Software Archive GitHub” should use this repository and follow these rules.
