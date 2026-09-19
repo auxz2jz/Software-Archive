@@ -35,6 +35,73 @@
     h2 { margin-top: 34px; }
     p, li { color: var(--muted); }
     a { color: var(--accent); word-break: break-word; }
+
+    .search-panel {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(10px);
+      padding: 12px 0;
+      margin: 18px 0 8px;
+    }
+    .search-box {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px;
+    }
+    .search-box input {
+      flex: 1;
+      min-width: 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel2);
+      color: var(--text);
+      font: inherit;
+      padding: 11px 12px;
+      outline: none;
+    }
+    .search-box input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgb(96 165 250 / 0.18);
+    }
+    .search-box button {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel2);
+      color: var(--text);
+      font: inherit;
+      font-weight: 700;
+      padding: 11px 14px;
+      cursor: pointer;
+    }
+    .search-box button:hover { border-color: var(--accent); }
+    .search-status {
+      margin: 8px 4px 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .no-results {
+      display: none;
+      background: var(--panel);
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      text-align: center;
+      color: var(--muted);
+      margin: 18px 0;
+    }
+    mark.search-hit {
+      background: #facc15;
+      color: #111827;
+      border-radius: 3px;
+      padding: 0 2px;
+    }
+
     .note {
       background: var(--panel);
       border: 1px solid var(--border);
@@ -91,6 +158,16 @@
     <strong>Purpose:</strong>
     Keep replacement/archive download links for software already owned on original media. Use original licenses/product keys where required. Verify downloaded images with hashes before treating them as archival copies.
   </div>
+
+
+  <div class="search-panel" role="search" aria-label="Search software archive">
+    <div class="search-box">
+      <input id="archiveSearch" type="search" placeholder="Search software, version, filename, ISO, floppy, source..." autocomplete="off" aria-label="Search archive entries">
+      <button id="clearSearch" type="button">Clear</button>
+    </div>
+    <div id="searchStatus" class="search-status" aria-live="polite">Showing all archive entries.</div>
+  </div>
+  <div id="noResults" class="no-results">No archive entries match that search.</div>
 
   <h2>Windows 98 Second Edition — Retail Full</h2>
 
@@ -261,5 +338,74 @@
 
   <p><small>Initial link archive created September 18, 2026. Status labels describe observations at the time this archive was created and may change later.</small></p>
 </main>
+
+<script>
+(function () {
+  const input = document.getElementById('archiveSearch');
+  const clear = document.getElementById('clearSearch');
+  const status = document.getElementById('searchStatus');
+  const noResults = document.getElementById('noResults');
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const headings = Array.from(document.querySelectorAll('main > h2'));
+
+  const sections = headings.map((heading, index) => {
+    const next = headings[index + 1] || null;
+    const sectionCards = [];
+    let node = heading.nextElementSibling;
+    while (node && node !== next) {
+      if (node.classList && node.classList.contains('card')) sectionCards.push(node);
+      node = node.nextElementSibling;
+    }
+    return { heading, cards: sectionCards };
+  });
+
+  function normalize(value) {
+    return value.toLowerCase().replace(/\s+/g, ' ').trim();
+  }
+
+  function runSearch() {
+    const query = normalize(input.value);
+    let visible = 0;
+
+    sections.forEach(section => {
+      const headingMatches = query && normalize(section.heading.textContent).includes(query);
+      let sectionVisible = false;
+
+      section.cards.forEach(card => {
+        const matches = !query || headingMatches || normalize(card.textContent).includes(query);
+        card.hidden = !matches;
+        if (matches) {
+          visible += 1;
+          sectionVisible = true;
+        }
+      });
+
+      section.heading.hidden = !sectionVisible;
+    });
+
+    const total = cards.length;
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+    status.textContent = query
+      ? 'Showing ' + visible + ' of ' + total + ' archive entries for “' + input.value.trim() + '”.'
+      : 'Showing all ' + total + ' archive entries.';
+
+    const url = new URL(window.location.href);
+    if (query) url.searchParams.set('q', input.value.trim());
+    else url.searchParams.delete('q');
+    history.replaceState(null, '', url);
+  }
+
+  input.addEventListener('input', runSearch);
+  clear.addEventListener('click', () => {
+    input.value = '';
+    input.focus();
+    runSearch();
+  });
+
+  const initial = new URL(window.location.href).searchParams.get('q');
+  if (initial) input.value = initial;
+  runSearch();
+})();
+</script>
 </body>
 </html>
