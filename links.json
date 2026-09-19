@@ -79,6 +79,62 @@
       "status": "alternate",
       "url": "http://disks.oldos.net/Boot/Windows%2098%20Second%20Edition.dsk",
       "purpose": "Additional setup/boot floppy image source"
+    },
+    {
+      "product": "DuckStation",
+      "edition": "Windows x64 installer (rolling latest)",
+      "type": "EXE",
+      "status": "official current",
+      "url": "https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-installer.exe",
+      "source_page": "https://github.com/stenzek/duckstation/releases",
+      "filename": "duckstation-windows-x64-installer.exe",
+      "observed_release_date": "2026-09-12",
+      "observed_size": "43.5 MB",
+      "observed_sha256": "36e77c57b7f755af4ac9147aa076f6334f8cbb692324b54531aac7c6b29ad783",
+      "purpose": "Official DuckStation PlayStation 1 emulator installer for 64-bit Windows 10/11"
+    },
+    {
+      "product": "DuckStation",
+      "edition": "Windows x64 portable archive (rolling latest)",
+      "type": "ZIP",
+      "status": "official current",
+      "url": "https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip",
+      "source_page": "https://github.com/stenzek/duckstation/releases",
+      "filename": "duckstation-windows-x64-release.zip",
+      "observed_release_date": "2026-09-12",
+      "observed_size": "69.3 MB",
+      "observed_sha256": "5ba3b9624b3073d3398c2cb8185ba3a014ff9e84f9c486627e0e8aa56371d352",
+      "purpose": "Official portable DuckStation PlayStation 1 emulator build for 64-bit Windows 10/11"
+    },
+    {
+      "product": "DuckStation",
+      "type": "source/release page",
+      "status": "official",
+      "url": "https://github.com/stenzek/duckstation/releases",
+      "purpose": "Official DuckStation release page and fallback source for current Windows, Linux, and macOS builds"
+    },
+    {
+      "product": "ImgBurn",
+      "edition": "2.5.8.0",
+      "type": "EXE",
+      "status": "official current release",
+      "url": "https://download.imgburn.com/SetupImgBurn_2.5.8.0.exe",
+      "source_page": "https://www.imgburn.com/?act=download",
+      "filename": "SetupImgBurn_2.5.8.0.exe",
+      "release_date": "2013-06-16",
+      "listed_size": "3,870 KB",
+      "crc32": "1AF3CD36",
+      "md5": "4BF2B8F4B46385BFDA4D65E423CFB868",
+      "sha1": "6A3D20796E1FCD4169D5D339AF6E491DCEA3367C",
+      "purpose": "Official ImgBurn installer for reading, building, writing, and verifying CD/DVD/Blu-ray disc images"
+    },
+    {
+      "product": "ImgBurn",
+      "edition": "2.5.8.0",
+      "type": "source page",
+      "status": "official",
+      "url": "https://www.imgburn.com/?act=download",
+      "purpose": "Official ImgBurn download page with mirrors and published CRC32/MD5/SHA-1 checksums"
     }
   ]
 }
