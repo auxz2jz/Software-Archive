@@ -1,0 +1,84 @@
+{
+  "title": "Software Archive Download Links",
+  "created": "2026-09-18",
+  "entries": [
+    {
+      "product": "Windows 98 Second Edition",
+      "edition": "English Retail Full",
+      "type": "ISO",
+      "status": "worked",
+      "url": "https://archive.org/download/WIN_98SE_RUS/en_windows_98se_101_rtm.iso",
+      "source_page": "https://archive.org/details/WIN_98SE_RUS",
+      "filename": "en_windows_98se_101_rtm.iso",
+      "size_bytes": 652738560,
+      "sha1": "F56E6FBC58C24F140B9E3A09930A0643A2BEF4DC",
+      "purpose": "Archive/replacement image for owned Windows 98 SE Retail Full CD"
+    },
+    {
+      "product": "Windows 98 Second Edition",
+      "edition": "English Startup Disk",
+      "type": "IMG",
+      "status": "working source",
+      "url": "https://archive.org/download/WIN_98SE_RUS/en_bootdisk-win98se.img",
+      "source_page": "https://archive.org/details/WIN_98SE_RUS",
+      "filename": "en_bootdisk-win98se.img",
+      "size_bytes": 1474560,
+      "known_retail_sha1_reference": "322CC0ED5091C5D37F3081F0E6609AD778232631",
+      "purpose": "Archive/recreate Windows 98 SE Startup Disk floppy"
+    },
+    {
+      "product": "Windows XP Professional SP3",
+      "edition": "English Retail x86",
+      "type": "ISO",
+      "status": "worked",
+      "url": "https://archive.org/download/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64/en_windows_xp_professional_with_service_pack_3_x86_cd_x14-80428.iso",
+      "source_page": "https://archive.org/details/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64",
+      "filename": "en_windows_xp_professional_with_service_pack_3_x86_cd_x14-80428.iso",
+      "size_bytes": 617756672,
+      "sha1": "1C735B38931BF57FB14EBD9A9BA253CEB443D459",
+      "purpose": "Archive/replacement image for owned Windows XP Professional SP3 Retail 32-bit CD"
+    },
+    {
+      "product": "Windows 98 Second Edition",
+      "type": "source page",
+      "status": "unreliable on user's mobile connection",
+      "url": "https://winworldpc.com/product/windows-98/98-second-edition",
+      "purpose": "Alternate source and release reference"
+    },
+    {
+      "product": "Windows 98 Second Edition Retail",
+      "type": "source page",
+      "status": "previously failed/stale",
+      "url": "https://archive.org/details/windows-98-se-retail",
+      "purpose": "Historical alternate source"
+    },
+    {
+      "product": "Windows 98 Second Edition Retail",
+      "type": "files directory",
+      "status": "previously failed/stale",
+      "url": "https://archive.org/download/windows-98-se-retail/",
+      "purpose": "Historical fallback if old item becomes available"
+    },
+    {
+      "product": "Windows 98 Second Edition",
+      "type": "IMG",
+      "status": "alternate",
+      "url": "https://www.allbootdisks.com/disk_images/Windows98_SE.img",
+      "purpose": "Alternate boot disk source; verify before treating as exact Microsoft retail image"
+    },
+    {
+      "product": "Windows 98",
+      "type": "source page",
+      "status": "alternate",
+      "url": "https://www.allbootdisks.com/download/98.html",
+      "purpose": "Fallback page for boot disk downloads"
+    },
+    {
+      "product": "Windows 98 Second Edition",
+      "type": "DSK",
+      "status": "alternate",
+      "url": "http://disks.oldos.net/Boot/Windows%2098%20Second%20Edition.dsk",
+      "purpose": "Additional setup/boot floppy image source"
+    }
+  ]
+}
