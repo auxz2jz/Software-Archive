@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Archive Download Links</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel2: #1f2937;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #60a5fa;
+      --good: #22c55e;
+      --warn: #f59e0b;
+      --bad: #ef4444;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    main {
+      width: min(1100px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+    h1 { margin-bottom: 8px; }
+    h2 { margin-top: 34px; }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); word-break: break-word; }
+    .note {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 18px 0;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin: 14px 0;
+    }
+    .card h3 { margin: 0 0 8px; }
+    .tag {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin: 0 6px 8px 0;
+      background: var(--panel2);
+    }
+    .working { color: var(--good); }
+    .reference { color: var(--accent); }
+    .unreliable { color: var(--warn); }
+    .failed { color: var(--bad); }
+    code {
+      background: var(--panel2);
+      padding: 2px 6px;
+      border-radius: 6px;
+      word-break: break-all;
+    }
+    .meta {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 6px 12px;
+      margin-top: 10px;
+    }
+    .meta strong { color: var(--text); }
+    @media (max-width: 650px) {
+      .meta { grid-template-columns: 1fr; }
+      .meta strong { margin-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Software Archive Download Links</h1>
+  <p>Personal reference page for archival download locations, disc images, floppy images, and verification information. Links are preserved here even if a source later stops working.</p>
+
+  <div class="note">
+    <strong>Purpose:</strong>
+    Keep replacement/archive download links for software already owned on original media. Use original licenses/product keys where required. Verify downloaded images with hashes before treating them as archival copies.
+  </div>
+
+  <h2>Windows 98 Second Edition — Retail Full</h2>
+
+  <div class="card">
+    <span class="tag working">WORKED</span>
+    <span class="tag reference">DIRECT ISO</span>
+    <h3>Windows 98 SE English Retail Full ISO</h3>
+    <p>This is the direct Internet Archive download that successfully worked. It is the English Windows 98 Second Edition Retail Full image.</p>
+    <p><a href="https://archive.org/download/WIN_98SE_RUS/en_windows_98se_101_rtm.iso">https://archive.org/download/WIN_98SE_RUS/en_windows_98se_101_rtm.iso</a></p>
+    <div class="meta">
+      <strong>Filename</strong><span><code>en_windows_98se_101_rtm.iso</code></span>
+      <strong>Expected size</strong><span>652,738,560 bytes (about 622.5 MiB)</span>
+      <strong>SHA-1</strong><span><code>F56E6FBC58C24F140B9E3A09930A0643A2BEF4DC</code></span>
+      <strong>Use</strong><span>Archive/replacement image for an English Windows 98 SE Retail Full CD.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag working">CURRENT SOURCE PAGE</span>
+    <h3>Windows 98 SE Multi-Language Preservation Collection</h3>
+    <p>Parent Internet Archive collection containing the working Retail Full ISO, boot-disk image, and other Windows 98 SE variants.</p>
+    <p><a href="https://archive.org/details/WIN_98SE_RUS">https://archive.org/details/WIN_98SE_RUS</a></p>
+    <div class="meta">
+      <strong>Use</strong><span>Fallback source page if the direct ISO URL changes or additional Windows 98 SE media is needed.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag working">DIRECT FLOPPY IMAGE</span>
+    <h3>Windows 98 SE English Boot/Startup Disk</h3>
+    <p>Direct Internet Archive download for the English Windows 98 SE boot-disk image.</p>
+    <p><a href="https://archive.org/download/WIN_98SE_RUS/en_bootdisk-win98se.img">https://archive.org/download/WIN_98SE_RUS/en_bootdisk-win98se.img</a></p>
+    <div class="meta">
+      <strong>Filename</strong><span><code>en_bootdisk-win98se.img</code></span>
+      <strong>Expected size</strong><span>1,474,560 bytes (1.44 MB floppy image)</span>
+      <strong>Known retail hash</strong><span><code>322CC0ED5091C5D37F3081F0E6609AD778232631</code></span>
+      <strong>Use</strong><span>Archive/recreate the Windows 98 SE Startup Disk floppy.</span>
+    </div>
+  </div>
+
+  <h2>Windows 98 SE — Alternate / Older Links</h2>
+
+  <div class="card">
+    <span class="tag unreliable">UNRELIABLE ON MOBILE CONNECTION</span>
+    <h3>WinWorld — Windows 98 Second Edition</h3>
+    <p>WinWorld product page listing Windows 98 SE releases including Retail Full. This page intermittently returned <code>ERR_CONNECTION_CLOSED</code> on the user's mobile connection, so it is retained as an alternate/reference link.</p>
+    <p><a href="https://winworldpc.com/product/windows-98/98-second-edition">https://winworldpc.com/product/windows-98/98-second-edition</a></p>
+    <div class="meta">
+      <strong>Use</strong><span>Alternate source and release reference.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag failed">PREVIOUSLY FAILED / STALE</span>
+    <h3>Older Internet Archive Windows 98 SE Retail Item</h3>
+    <p>This older item page was previously supplied but later failed to load. Kept here so the historical source is not lost.</p>
+    <p><a href="https://archive.org/details/windows-98-se-retail">https://archive.org/details/windows-98-se-retail</a></p>
+    <div class="meta">
+      <strong>Use</strong><span>Historical alternate source only; current availability is unreliable.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag failed">PREVIOUSLY FAILED / STALE</span>
+    <h3>Older Internet Archive Direct Files Directory</h3>
+    <p>Direct files directory associated with the older Windows 98 SE Retail item.</p>
+    <p><a href="https://archive.org/download/windows-98-se-retail/">https://archive.org/download/windows-98-se-retail/</a></p>
+    <div class="meta">
+      <strong>Use</strong><span>Historical fallback if the old item is restored.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag reference">ALTERNATE BOOT DISK</span>
+    <h3>AllBootDisks — Windows 98 SE IMG</h3>
+    <p>Alternate Windows 98 SE boot-disk image. Useful as a replacement boot disk, but it should not automatically be assumed to be byte-for-byte identical to the original Microsoft retail floppy.</p>
+    <p><a href="https://www.allbootdisks.com/disk_images/Windows98_SE.img">https://www.allbootdisks.com/disk_images/Windows98_SE.img</a></p>
+    <div class="meta">
+      <strong>Use</strong><span>Backup boot-disk source.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag reference">ALTERNATE PAGE</span>
+    <h3>AllBootDisks — Windows 98 Download Page</h3>
+    <p>Parent page for Windows 98 boot-disk downloads.</p>
+    <p><a href="https://www.allbootdisks.com/download/98.html">https://www.allbootdisks.com/download/98.html</a></p>
+    <div class="meta">
+      <strong>Use</strong><span>Fallback if the direct AllBootDisks IMG URL changes.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag reference">ALTERNATE FLOPPY FORMAT</span>
+    <h3>OldOS — Windows 98 SE Retail Setup Disk (.DSK)</h3>
+    <p>Older archived Windows 98 SE setup/boot disk in DSK format.</p>
+    <p><a href="http://disks.oldos.net/Boot/Windows%2098%20Second%20Edition.dsk">http://disks.oldos.net/Boot/Windows%2098%20Second%20Edition.dsk</a></p>
+    <div class="meta">
+      <strong>Use</strong><span>Additional floppy-image backup source.</span>
+    </div>
+  </div>
+
+  <h2>Windows XP Professional SP3 — Retail x86</h2>
+
+  <div class="card">
+    <span class="tag working">DIRECT ISO</span>
+    <h3>Windows XP Professional SP3 x86 Retail — English</h3>
+    <p>Direct Internet Archive download for the English 32-bit Windows XP Professional with Service Pack 3 Retail CD image.</p>
+    <p><a href="https://archive.org/download/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64/en_windows_xp_professional_with_service_pack_3_x86_cd_x14-80428.iso">https://archive.org/download/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64/en_windows_xp_professional_with_service_pack_3_x86_cd_x14-80428.iso</a></p>
+    <div class="meta">
+      <strong>Filename</strong><span><code>en_windows_xp_professional_with_service_pack_3_x86_cd_x14-80428.iso</code></span>
+      <strong>Expected size</strong><span>617,756,672 bytes (about 589 MiB)</span>
+      <strong>SHA-1</strong><span><code>1C735B38931BF57FB14EBD9A9BA253CEB443D459</code></span>
+      <strong>Use</strong><span>Archive/replacement image for English Windows XP Professional SP3 Retail 32-bit media.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="tag working">CURRENT SOURCE PAGE</span>
+    <h3>Windows XP Original MSDN ISO Collection</h3>
+    <p>Parent Internet Archive collection containing the XP Professional SP3 Retail ISO and several other Windows XP releases.</p>
+    <p><a href="https://archive.org/details/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64">https://archive.org/details/windows-xp-all-sp-msdn-iso-files-en-de-ru-tr-x86-x64</a></p>
+    <div class="meta">
+      <strong>Use</strong><span>Fallback source page if the direct XP ISO URL changes.</span>
+    </div>
+  </div>
+
+  <h2>Verification / Reference Links</h2>
+
+  <div class="card">
+    <span class="tag reference">REFERENCE</span>
+    <h3>WinWorld Forum — Windows 9x Image References</h3>
+    <p>Reference discussion previously used for Windows 98 image identification and hashes.</p>
+    <p><a href="https://forum.winworldpc.com/discussion/7157/offer-microsoft-windows-9x-95-98fe-98se-me">https://forum.winworldpc.com/discussion/7157/offer-microsoft-windows-9x-95-98fe-98se-me</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag reference">REFERENCE</span>
+    <h3>My Digital Life — Windows 98 SE Hash Discussion</h3>
+    <p>Reference discussion used to cross-check Windows 98 SE retail image hashes and floppy-image information.</p>
+    <p><a href="https://forums.mydigitallife.net/threads/windows-98-se-hash.9222/page-3">https://forums.mydigitallife.net/threads/windows-98-se-hash.9222/page-3</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag reference">REFERENCE</span>
+    <h3>My Digital Life — Verified Windows 9x/ME Floppy & CD Images</h3>
+    <p>Reference discussion for verified Windows 9x/ME floppy and CD image hashes.</p>
+    <p><a href="https://forums.mydigitallife.net/threads/verified-sha1-floppy-cd-image-of-microsoft-windows-9x-me.54014/page-3">https://forums.mydigitallife.net/threads/verified-sha1-floppy-cd-image-of-microsoft-windows-9x-me.54014/page-3</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag reference">REFERENCE</span>
+    <h3>Microsoft Q&A — XP SP3 Image Hash Reference</h3>
+    <p>Microsoft-hosted community reference previously used to cross-check the XP Professional SP3 Retail image size/hash.</p>
+    <p><a href="https://learn.microsoft.com/en-gb/answers/questions/2431828/needing-to-know-if-windows-xp-professional-with-sp">https://learn.microsoft.com/en-gb/answers/questions/2431828/needing-to-know-if-windows-xp-professional-with-sp</a></p>
+  </div>
+
+  <div class="card">
+    <span class="tag reference">REFERENCE</span>
+    <h3>RG-Adguard File Reference — XP SP3 Retail</h3>
+    <p>Additional file-reference page previously used to verify the XP Professional SP3 Retail image.</p>
+    <p><a href="https://files.rg-adguard.net/file/a18066dd-500a-8e66-9025-49f5d33f9204">https://files.rg-adguard.net/file/a18066dd-500a-8e66-9025-49f5d33f9204</a></p>
+  </div>
+
+  <div class="note">
+    <strong>Archive practice:</strong> Keep the original discs/floppies, one verified local image, and at least one second copy on separate storage. A source URL disappearing should not be the only thing standing between you and your archive.
+  </div>
+
+  <p><small>Initial link archive created September 18, 2026. Status labels describe observations at the time this archive was created and may change later.</small></p>
+</main>
+</body>
+</html>
