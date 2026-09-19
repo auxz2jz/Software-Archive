@@ -29,6 +29,27 @@ The main human-friendly page is **[index.html](./index.html)**. It includes desc
 - SHA-1: `1C735B38931BF57FB14EBD9A9BA253CEB443D459`
 - Purpose: archival/replacement image for an owned Windows XP Professional SP3 Retail 32-bit CD.
 
+## DuckStation
+
+- **Official Windows x64 installer (rolling latest):** https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-installer.exe
+- **Official Windows x64 portable ZIP (rolling latest):** https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip
+- **Official releases page:** https://github.com/stenzek/duckstation/releases
+- Observed release date: **September 12, 2026**
+- Installer observed SHA-256: `36e77c57b7f755af4ac9147aa076f6334f8cbb692324b54531aac7c6b29ad783`
+- Portable ZIP observed SHA-256: `5ba3b9624b3073d3398c2cb8185ba3a014ff9e84f9c486627e0e8aa56371d352`
+- Purpose: official DuckStation PlayStation 1 emulator builds for Windows 10/11.
+
+## ImgBurn
+
+- **Official installer:** https://download.imgburn.com/SetupImgBurn_2.5.8.0.exe
+- **Official download/mirror page:** https://www.imgburn.com/?act=download
+- Current official version: **2.5.8.0**
+- Released: **June 16, 2013**
+- CRC32: `1AF3CD36`
+- MD5: `4BF2B8F4B46385BFDA4D65E423CFB868`
+- SHA-1: `6A3D20796E1FCD4169D5D339AF6E491DCEA3367C`
+- Purpose: read, build, burn, and verify CD/DVD/Blu-ray disc images.
+
 ## Older / alternate links kept intentionally
 
 These links are preserved even if they failed or were unreliable, because this repository is meant to be a long-term URL backup.
